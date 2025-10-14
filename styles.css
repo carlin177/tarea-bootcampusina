@@ -1,0 +1,47 @@
+/* Estilos para tarjetas de actividades */
+#contenedorActividades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 24px;
+}
+
+#contenedorActividades > div {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    padding: 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+#contenedorActividades > div:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+#contenedorActividades h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+#contenedorActividades p {
+    margin: 0 0 12px 0;
+    color: #555;
+    text-align: center;
+}
+
+#contenedorActividades img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 8px;
+    object-fit: cover;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
