@@ -45,3 +45,55 @@
     object-fit: cover;
     box-shadow: 0 1px 4px rgba(0,0,0,0.10);
 }
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2a2a2a;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+form input[type="text"] {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 220px;
+    background: #fafafa;
+}
+
+form input[type="text"]:focus {
+    border-color: #0078d4;
+}
+
+#btnAgregar {
+    display: block;
+    margin: 0 auto 32px auto;
+    padding: 12px 32px;
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+#btnAgregar:hover {
+    background: #005fa3;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+}
