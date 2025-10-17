@@ -7,6 +7,81 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="container">
+    <header role="banner">
+        <div class="avatar" aria-hidden="true">CE</div>
+        <div>
+            <h1>Carlos Esquivel</h1>
+            <p>19 años — estudiante de JavaScript</p>
+            <p class="small">Página sobre mis deportes favoritos</p>
+        </div>
+    </header>
+
+    <main role="main" class="main-content">
+        <section class="card">
+            <h2>Baloncesto (Básquetball)</h2>
+            <p class="small">Me gusta por la velocidad, el trabajo en equipo y la estrategia ofensiva y defensiva.</p>
+            <div class="grid" aria-hidden="false">
+                <div>
+                    <strong>Posición favorita</strong>
+                    <p class="small">Escolta / Alero</p>
+                </div>
+                <div>
+                    <strong>Habilidades</strong>
+                    <ul>
+                        <li>Drible</li>
+                        <li>Tiro exterior</li>
+                        <li>Pases rápidos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Vóley (Voleibol)</h2>
+            <p class="small">Disfruto del juego en la red, los saques y la coordinación con el equipo.</p>
+            <div class="grid">
+                <div>
+                    <strong>Rol</strong>
+                    <p class="small">Rematador / Bloqueador</p>
+                </div>
+                <div>
+                    <strong>Aspectos que practico</strong>
+                    <ul>
+                        <li>Recepción</li>
+                        <li>Colocación</li>
+                        <li>Armado de jugadas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Fútbol</h2>
+            <p class="small">Me interesa por la táctica, la resistencia física y la pasión que genera en las aficiones.</p>
+            <div class="grid">
+                <div>
+                    <strong>Posición favorita</strong>
+                    <p class="small">Mediocampista</p>
+                </div>
+                <div>
+                    <strong>Habilidades</strong>
+                    <ul>
+                        <li>Pase corto y largo</li>
+                        <li>Visión de juego</li>
+                        <li>Control y conducción</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div>© Carlos Esquivel</div>
+        <div class="small">Estudiante de JavaScript — 19 años</div>
+    </footer>
+</div>
+
     <h1>Repositorio de Actividades</h1>
     <form>
         <input type="text" id="nombre" placeholder="Nombre de la actividad">
@@ -16,11 +91,12 @@
     <button id="btnAgregar">Agregar Actividad</button>
     <div id="contenedorActividades"></div>
 
+    
 
 
 
 
 
-    <script src="index.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

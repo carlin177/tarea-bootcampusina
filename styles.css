@@ -1,4 +1,64 @@
-/* Estilos para tarjetas de actividades */
+:root{
+    --bg: linear-gradient(180deg,#061426 0%, #071a2b 100%);
+    --card: rgba(255,255,255,0.03);
+    --accent: #7ef9c5;     /* mint */
+    --accent-2: #6dd3ff;   /* cyan */
+    --muted: #98a8bd;
+    --text: #e9f6ff;
+    --radius: 12px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Base */
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:900px;margin:36px auto;padding:20px;}
+
+header, footer{
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:18px;
+    border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 10px 30px rgba(3,8,20,0.6);
+    backdrop-filter: blur(6px);
+}
+header{display:flex;align-items:center;gap:16px}
+
+/* Avatar with fresh gradient */
+.avatar{
+    width:72px;height:72px;border-radius:12px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:flex;align-items:center;justify-content:center;color:#042233;font-weight:800;font-size:28px;
+    box-shadow: 0 6px 18px rgba(109,211,255,0.12), inset 0 -6px 18px rgba(0,0,0,0.12);
+}
+header h1{margin:0;font-size:20px}
+header p{margin:4px 0 0;color:var(--muted);font-size:14px}
+
+main{margin:18px 0;display:grid;gap:16px}
+.card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:16px;border-radius:var(--radius);
+    box-shadow: 0 8px 24px rgba(2,6,20,0.6);
+    border:1px solid rgba(255,255,255,0.03);
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+h2{margin:0 0 8px;font-size:16px;color:var(--accent-2)}
+p.small{color:var(--muted);margin:0 0 8px;font-size:14px}
+ul{margin:0 0 8px 18px}
+footer{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted)}
+
+/* Responsive tweaks */
+@media (max-width:480px){
+    header{flex-direction:row}
+    .avatar{width:56px;height:56px;font-size:22px}
+}
+
+/* Actividades: nuevo estilo más original */
 #contenedorActividades {
     display: flex;
     flex-wrap: wrap;
@@ -8,31 +68,35 @@
 }
 
 #contenedorActividades > div {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 12px 40px rgba(5,12,30,0.65), 0 2px 8px rgba(13,165,140,0.03);
     padding: 20px;
     width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: box-shadow 0.2s;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    backdrop-filter: blur(6px);
 }
 
 #contenedorActividades > div:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 18px 50px rgba(5,12,30,0.75), 0 6px 30px rgba(109,211,255,0.06);
 }
 
 #contenedorActividades h3 {
     margin: 0 0 10px 0;
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 1.15rem;
+    color: var(--text);
     text-align: center;
+    letter-spacing: 0.2px;
 }
 
 #contenedorActividades p {
     margin: 0 0 12px 0;
-    color: #555;
+    color: var(--muted);
     text-align: center;
 }
 
@@ -40,21 +104,25 @@
     width: 100%;
     max-width: 220px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-top: 8px;
     object-fit: cover;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    box-shadow: 0 6px 18px rgba(2,8,20,0.6);
+    border: 1px solid rgba(255,255,255,0.03);
 }
+
+/* Titular principal */
 h1 {
     text-align: center;
     font-size: 2rem;
-    color: #2a2a2a;
+    color: var(--text);
     margin-top: 32px;
     margin-bottom: 24px;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 1px;
 }
 
+/* Formulario y controles con brillo de acento */
 form {
     display: flex;
     justify-content: center;
@@ -65,35 +133,45 @@ form {
 
 form input[type="text"] {
     padding: 10px 14px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
     font-size: 1rem;
     outline: none;
-    transition: border-color 0.2s;
+    transition: box-shadow 0.18s, border-color 0.18s;
     width: 220px;
-    background: #fafafa;
+    background: rgba(255,255,255,0.02);
+    color: var(--text);
 }
+
+form input[type="text"]::placeholder { color: rgba(250,250,250,0.4); }
 
 form input[type="text"]:focus {
-    border-color: #0078d4;
+    border-color: rgba(110,211,255,0.9);
+    box-shadow: 0 6px 24px rgba(109,211,255,0.08), 0 0 10px rgba(110,211,255,0.06);
 }
 
+/* Botón con degradado vibrante */
 #btnAgregar {
     display: block;
     margin: 0 auto 32px auto;
     padding: 12px 32px;
-    background: #0078d4;
-    color: #fff;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+    color: #042233;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 30px rgba(6,20,40,0.5), 0 2px 12px rgba(109,211,255,0.06);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
 }
 
 #btnAgregar:hover {
-    background: #005fa3;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(6,20,40,0.7), 0 6px 24px rgba(109,211,255,0.09);
+    opacity: 0.98;
 }
+
+/* Small helpers */
+a { color: var(--accent-2); text-decoration: none; }
+code { background: rgba(255,255,255,0.02); padding: 2px 6px; border-radius:6px; color: var(--text); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", monospace; }
